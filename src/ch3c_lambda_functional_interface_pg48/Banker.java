@@ -48,6 +48,10 @@ public class Banker {
 
         //from previous package we started the onAccountExepmted with an anonymous class
         // now its time to take off the training wheels and turn the anonymous class to a lambda expression
+        /*
+        acc -> acc.getBalance() - amount > 700 is the entire implementation of the interface Exemptable with its empty method isExempt(Account account) 
+        as a matter of fact you can implement anything acc -> 1!=2 or if isExempt was a parameterless method you could implement lambda like this () -> "dog".equals("dog")
+        */
         banker.isBalanceSufficient(account, amount, acc -> acc.getBalance() - amount > 700,
                 new AccountExemptionHandler() {
 

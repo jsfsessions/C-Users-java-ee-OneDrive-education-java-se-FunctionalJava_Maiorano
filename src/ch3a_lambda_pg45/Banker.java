@@ -76,6 +76,12 @@ public class Banker {
          */
         // Call third version with anonymous class
 //        Exemptable ex;
+
+/*
+        acc -> acc.getBalance() - amount > 700 is the entire implementation of the interface Exemptable with its empty method isExempt(Account account) 
+        as a matter of fact you can implement anything acc -> 1!=2 or if isExempt was a parameterless method you could implement lambda like this () -> "dog".equals("dog")
+        */
+
         banker.isBalanceSufficient(account, amount,
                 new Exemptable() {
             @Override
